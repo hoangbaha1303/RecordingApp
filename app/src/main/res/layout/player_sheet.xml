@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5AB59A"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+    app:behavior_peekHeight="70dp"
+    android:id="@+id/player_sheet"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#84bbab"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/musical_note" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:text="Media Player"
+            android:textColor="#f19891"
+
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/player_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="24dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp"
+            android:text="Not Playing"
+            android:textAlignment="textEnd"
+            android:textColor="#f19891"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/player_filename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="File Names"
+        android:textAlignment="center"
+        android:textColor="#f19891"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageButton
+        android:id="@+id/player_play_btn"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:background="#5AB59A"
+        android:padding="16dp"
+        android:src="@drawable/play"
+        app:layout_constraintEnd_toEndOf="@+id/player_filename"
+        app:layout_constraintStart_toStartOf="@+id/player_filename"
+        app:layout_constraintTop_toBottomOf="@+id/player_filename" />
+
+    <SeekBar
+        android:id="@+id/player_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_play_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
